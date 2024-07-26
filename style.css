@@ -9,18 +9,25 @@ body, html {
     font-family: Arial, sans-serif; /* Clean font for the page */
 }
 
-/* Container for the custom audio player */
+
+/* Centering container for the custom audio player */
 .custom-audio-player {
     display: flex;
-    align-items: center;
+    flex-direction: column; /* Stack controls vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
     gap: 10px;
-    margin-top: 20px;
+    position: absolute; /* Positioning for centering */
+    top: 50%; /* Vertical center */
+    left: 50%; /* Horizontal center */
+    transform: translate(-50%, -40%); /* Adjust for exact centering */
     background: linear-gradient(145deg, #1a1a1a, #333); /* Dark gradient background */
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
     border: 2px solid #444; /* Slightly lighter border for contrast */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); /* Soft shadow for depth */
 }
+
 
 /* Play and Stop buttons */
 button {
