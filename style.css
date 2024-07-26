@@ -4,31 +4,29 @@ body, html {
     padding: 0;
     height: 100%;
     overflow: hidden; /* Prevent scrollbars */
-    background-color: black; /* Background color is black */
+    background-color: black; /* Fallback background color */
 }
 
 /* Container for the background video */
 .background-container {
-    position: fixed; /* Fixed to ensure it covers the full screen */
+    position: fixed; /* Keeps the container fixed in the viewport */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: black; /* Ensures background color is black */
-    display: flex;
-    align-items: center; /* Center video vertically */
-    justify-content: center; /* Center video horizontally */
-    z-index: -1; /* Ensures it is behind other content */
+    background-color: black; /* Background color */
+    overflow: hidden; /* Hide any overflow from the video */
+    z-index: -1; /* Ensure the container is behind the content */
 }
 
 /* Styles for the video */
 #background-video {
-    position: absolute; /* Absolute to position it relative to the container */
+    position: absolute; /* Positioned relative to its container */
     top: 0;
     left: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    object-fit: cover; /* Cover the container, maintaining aspect ratio */
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
 }
 
 /* Main content styling */
@@ -39,3 +37,4 @@ main {
     text-align: center;
     padding: 20px; /* Adjust padding as needed */
 }
+
