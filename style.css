@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: black; /* Black background */
+    background-color: black; /* Black background for contrast */
     color: white; /* White text for readability */
     font-family: Arial, sans-serif; /* Clean, sans-serif font */
     height: 100vh; /* Full viewport height */
@@ -20,13 +20,14 @@ body {
 
 .particle {
     position: absolute;
-    background-color: black;
-    border-radius: 50%;
+    background-color: white; /* Snowflake color */
+    border-radius: 50%; /* Makes particles round */
     pointer-events: none; /* Particles should not block interactions */
+    opacity: 0.8; /* Slight transparency for a more realistic effect */
 }
 
 main {
-    position: relative; /* Ensure main content is positioned correctly */
+    position: relative; /* Ensure main content is above particles */
     z-index: 1; /* Places main content above the particles */
     text-align: center;
 }
