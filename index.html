@@ -3,10 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Black Screen Page</title>
+    <title>Background Video</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main></main>
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="videos/background.mp4" type="video/mp4">
+            <!-- Include fallback formats if needed -->
+            <!-- <source src="videos/background.webm" type="video/webm"> -->
+            <!-- <source src="videos/background.ogv" type="video/ogg"> -->
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <main>
+        <!-- Your main content here -->
+    </main>
+    <script src="particles.js"></script>
 </body>
 </html>
