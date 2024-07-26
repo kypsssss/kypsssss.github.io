@@ -1,9 +1,15 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: black;
-    height: 100vh;
+    background-color: black; /* Sets background color to black */
+    color: white; /* Sets text color to white for readability */
+    font-family: Arial, sans-serif; /* Sets a clean, sans-serif font */
+    height: 100vh; /* Ensures the body takes up full viewport height */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Center-aligns content horizontally */
+    align-items: center; /* Center-aligns content vertically */
+}
+
+main {
+    text-align: center; /* Center-aligns text within the main content */
 }
