@@ -4,11 +4,10 @@ body, html {
     padding: 0;
     height: 100%;
     overflow: hidden;
-    background-color: #121212; /* Dark background for the entire page */
+    background-color: #000000; /* Set background color to black */
     color: #e0e0e0; /* Light text color for readability */
     font-family: Arial, sans-serif; /* Clean font for the page */
 }
-
 
 /* Centering container for the custom audio player */
 .custom-audio-player {
