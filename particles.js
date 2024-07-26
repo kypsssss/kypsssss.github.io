@@ -1,19 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const particleCount = 100; // Number of particles
+    const particleCount = 100; // Number of snowflakes
     const particles = [];
-    const particleSize = 5; // Size of each particle
+    const particleSize = 10; // Size of each snowflake
 
     function createParticle() {
         const particle = document.createElement('div');
         particle.className = 'particle';
         particle.style.width = `${particleSize}px`;
         particle.style.height = `${particleSize}px`;
-        particle.style.backgroundColor = 'black';
+        particle.style.backgroundColor = 'white'; // Snowflake color
         particle.style.position = 'absolute';
         particle.style.borderRadius = '50%';
         particle.style.opacity = Math.random() * 0.5 + 0.5; // Random opacity
         particle.style.left = `${Math.random() * window.innerWidth}px`;
-        particle.style.top = `-${particleSize}px`;
+        particle.style.top = `-${particleSize}px`; // Start above the viewport
         document.getElementById('particles').appendChild(particle);
         particles.push(particle);
     }
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         particles.forEach(particle => {
             const topPosition = parseFloat(particle.style.top);
             if (topPosition < window.innerHeight) {
-                particle.style.top = `${topPosition + 1}px`; // Fall speed
+                particle.style.top = `${topPosition + 1}px`; // Falling speed
             } else {
                 // Reset particle to the top when it goes off screen
                 particle.style.top = `-${particleSize}px`;
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
         requestAnimationFrame(animateParticles);
     }
 
-    // Create initial particles
+    // Create initial snowflakes
     for (let i = 0; i < particleCount; i++) {
         createParticle();
     }
