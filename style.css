@@ -4,7 +4,7 @@ body, html {
     padding: 0;
     height: 100%;
     overflow: hidden; /* Prevent scrollbars */
-    background-color: black; /* Fallback background color */
+    background-color: black; /* Background color for fallback */
 }
 
 /* Container for the background video */
@@ -24,17 +24,8 @@ body, html {
     position: absolute; /* Positioned relative to its container */
     top: 0;
     left: 0;
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: fill; /* Stretch video to fill container */
+    /* You can use object-fit: cover; to maintain aspect ratio */
 }
-
-/* Main content styling */
-main {
-    position: relative; /* Ensure main content is above the video */
-    z-index: 1; /* Places main content above the video */
-    color: white; /* Sets text color for readability */
-    text-align: center;
-    padding: 20px; /* Adjust padding as needed */
-}
-
