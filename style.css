@@ -4,12 +4,12 @@ body, html {
     padding: 0;
     height: 100%;
     overflow: hidden; /* Prevent scrollbars */
-    background-color: black; /* Ensure background color is black */
+    background-color: black; /* Background color is black */
 }
 
 /* Container for the background video */
 .background-container {
-    position: absolute; /* Ensures the container covers the full screen */
+    position: fixed; /* Fixed to ensure it covers the full screen */
     top: 0;
     left: 0;
     width: 100%;
@@ -23,9 +23,11 @@ body, html {
 
 /* Styles for the video */
 #background-video {
+    position: absolute; /* Absolute to position it relative to the container */
+    top: 0;
+    left: 0;
     width: 100%; /* Full width */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 100%; /* Ensure it doesn't exceed container height */
+    height: 100%; /* Full height */
     object-fit: cover; /* Cover the container, maintaining aspect ratio */
 }
 
