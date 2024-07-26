@@ -3,26 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full-Screen Background Video</title>
+    <title>Background Video</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Full-screen video background container -->
     <div class="video-background">
+        <!-- Background video -->
         <video autoplay muted loop id="background-video">
             <source src="videos/background.mp4" type="video/mp4">
-            <!-- Include fallback formats if needed -->
+            <!-- Additional formats for compatibility -->
             <!-- <source src="videos/background.webm" type="video/webm"> -->
             <!-- <source src="videos/background.ogv" type="video/ogg"> -->
+            <!-- Fallback text if video cannot be played -->
             Your browser does not support the video tag.
         </video>
     </div>
     
     <!-- Main content of your site -->
     <main>
-        <!-- Your main content here -->
+        <h1>Welcome to My Site</h1>
+        <p>This is some content displayed over the video background.</p>
     </main>
     
-    <script src="particles.js"></script>
+    <!-- Optional JavaScript or other resources -->
+    <!-- Remove any references to particles.js or related scripts -->
 </body>
 </html>
