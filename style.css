@@ -1,39 +1,54 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden; /* Prevent scrollbars */
-    background-color: black; /* Background color for fallback */
+/* Basic styling for the custom audio player */
+.custom-audio-player {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    background-color: #000; /* Black background for the player */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333; /* Slightly lighter border for contrast */
 }
 
-/* Container for the background video */
-.background-container {
-    position: fixed; /* Keeps the container fixed in the viewport */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black; /* Background color */
-    overflow: hidden; /* Hide any overflow from the video */
-    z-index: -1; /* Ensure the container is behind the content */
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #333; /* Dark background for buttons */
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-/* Styles for the video */
-#background-video {
-    position: absolute; /* Positioned relative to its container */
-    top: 0;
-    left: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    object-fit: fill; /* Stretch video to fill container */
-    /* You can use object-fit: cover; to maintain aspect ratio */
+button:hover {
+    background-color: #555; /* Slightly lighter on hover */
 }
 
-/* Main content styling */
-main {
-    position: relative; /* Ensure main content is above the video */
-    z-index: 1; /* Places main content above the video */
-    color: white; /* Sets text color for readability */
-    text-align: center;
-    padding: 20px; /* Adjust padding as needed */
+input[type="range"] {
+    width: 100px;
+    accent-color: #fff; /* White slider color */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    background: #333; /* Dark thumb color */
+}
+
+input[type="range"]::-moz-range-thumb {
+    background: #333; /* Dark thumb color */
+}
+
+input[type="range"]::-ms-thumb {
+    background: #333; /* Dark thumb color */
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background: #555; /* Darker track color */
+}
+
+input[type="range"]::-moz-range-track {
+    background: #555; /* Darker track color */
+}
+
+input[type="range"]::-ms-track {
+    background: #555; /* Darker track color */
 }
