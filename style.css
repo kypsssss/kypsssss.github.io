@@ -18,6 +18,13 @@ body {
     pointer-events: none; /* Allows interaction with elements underneath */
 }
 
+.particle {
+    position: absolute;
+    background-color: black;
+    border-radius: 50%;
+    pointer-events: none; /* Particles should not block interactions */
+}
+
 main {
     position: relative; /* Ensure main content is positioned correctly */
     z-index: 1; /* Places main content above the particles */
