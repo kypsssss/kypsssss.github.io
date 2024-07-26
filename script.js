@@ -4,10 +4,22 @@ const playPauseBtn = document.getElementById('playPauseBtn');
 const stopBtn = document.getElementById('stopBtn');
 const volumeControl = document.getElementById('volumeControl');
 
-// Play or pause the audio
+// Function to play the audio
+function playAudio() {
+    audio.play().catch(error => {
+        console.error('Autoplay was prevented:', error);
+    });
+}
+
+// Play audio automatically when the page loads
+window.addEventListener('load', () => {
+    playAudio();
+});
+
+// Toggle play/pause
 playPauseBtn.addEventListener('click', () => {
     if (audio.paused) {
-        audio.play();
+        playAudio();
         playPauseBtn.textContent = 'Pause';
     } else {
         audio.pause();
