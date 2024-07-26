@@ -3,10 +3,11 @@ body, html {
     padding: 0;
     height: 100%;
     overflow: hidden; /* Prevent scrollbars */
+    background: black; /* Fallback color in case video fails to load */
 }
 
 .video-background {
-    position: fixed; /* Keeps the video in place */
+    position: fixed; /* Keeps the video fixed in the viewport */
     top: 0;
     left: 0;
     width: 100%;
