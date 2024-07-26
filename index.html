@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>voq.cc</title>
+    <title>voq</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>My Custom Audio Player</h1>
-
+    <!-- Removed the heading element -->
+    
     <!-- Custom audio player -->
     <div class="custom-audio-player">
-        <audio id="audio" src="audio/song.mp3"></audio>
-        <button id="playPauseBtn">Play</button>
+        <audio id="audio" src="audio/song.mp3" preload="auto"></audio>
+        <button id="playPauseBtn">Pause</button>
         <button id="stopBtn">Stop</button>
         <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1">
     </div>
