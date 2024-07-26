@@ -1,104 +1,86 @@
-/* Basic reset for body and html */
-body, html {
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
     margin: 0;
     padding: 0;
-    height: 100%;
-    overflow: hidden;
-    background-color: #000000; /* Set background color to black */
-    color: #e0e0e0; /* Light text color for readability */
-    font-family: Arial, sans-serif; /* Clean font for the page */
+    box-sizing: border-box;
 }
 
-/* Centering container for the custom audio player */
-.custom-audio-player {
+body {
     display: flex;
-    flex-direction: column; /* Stack controls vertically */
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
-    gap: 10px;
-    position: absolute; /* Positioning for centering */
-    top: 50%; /* Vertical center */
-    left: 50%; /* Horizontal center */
-    transform: translate(-50%, -40%); /* Adjust for exact centering */
-    background: linear-gradient(145deg, #1a1a1a, #333); /* Dark gradient background */
-    padding: 20px;
-    border-radius: 10px;
-    border: 2px solid #444; /* Slightly lighter border for contrast */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); /* Soft shadow for depth */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #000;
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
 }
 
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+}
 
-/* Play and Stop buttons */
-button {
-    padding: 10px 20px;
-    border: none;
-    background: linear-gradient(145deg, #333, #444); /* Dark gradient for buttons */
-    color: #e0e0e0;
+.top a {
+    font-size: 18px;
+    padding: 6px;
+    border-radius: 100%;
     cursor: pointer;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: background 0.3s, transform 0.2s; /* Smooth transition for hover effect */
+    transition: 0.2s;
+    color: #fff;
 }
 
-button:hover {
-    background: linear-gradient(145deg, #444, #555); /* Lighter gradient on hover */
-    transform: translateY(-2px); /* Slight lift effect */
+.top a:hover {
+    font-size: 22px;
 }
 
-button:active {
-    transform: translateY(2px); /* Button press effect */
+.main {
+    width: 450px;
+    padding: 25px;
+    text-align: right;
+    color: #f7f7f7eb;
+    letter-spacing: 1px;
+    z-index: 9999;
+    font-size: 13px;
 }
 
-/* Volume control slider */
-input[type="range"] {
-    width: 120px;
-    height: 6px;
-    background: #333; /* Dark track color */
-    border-radius: 5px;
-    -webkit-appearance: none; /* Remove default styling */
-    outline: none; /* Remove outline */
-    cursor: pointer;
+.small {
+    color: #e8e8e899;
+    font-size: 0.9rem;
 }
 
-input[type="range"]::-webkit-slider-thumb {
-    background: #e0e0e0; /* Light thumb color */
-    border: 2px solid #444; /* Dark border for thumb */
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    -webkit-appearance: none; /* Remove default styling */
-    cursor: pointer;
+.divider {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 15px 0;
+    font-size: 20px;
 }
 
-input[type="range"]::-moz-range-thumb {
-    background: #e0e0e0; /* Light thumb color */
-    border: 2px solid #444; /* Dark border for thumb */
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
+.line {
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
+    color: #fff;
 }
 
-input[type="range"]::-ms-thumb {
-    background: #e0e0e0; /* Light thumb color */
-    border: 2px solid #444; /* Dark border for thumb */
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
+.after {
+    display: none;
 }
 
-/* Track styling */
-input[type="range"]::-webkit-slider-runnable-track {
-    background: #555; /* Darker track color */
-    border-radius: 5px;
-}
 
-input[type="range"]::-moz-range-track {
-    background: #555; /* Darker track color */
-    border-radius: 5px;
-}
-
-input[type="range"]::-ms-track {
-    background: #555; /* Darker track color */
-    border-radius: 5px;
-    border-color: transparent;
+.before {
+    text-align: center;
+    color: #fff;
+    user-select: none;
+    font-size: 12px;
+    font-weight: 300;
 }
